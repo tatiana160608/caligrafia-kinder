@@ -7,100 +7,144 @@
   <style>
     body {
       font-family: "Segoe UI", sans-serif;
-      background-color: #fffaf4;
+      background-color: #fefcfb;
       color: #333;
       margin: 0;
       padding: 0;
     }
+
     header {
-      background-color: #f6d5d5;
-      padding: 20px;
+      background-color: #c5cae9;
+      padding: 30px;
       text-align: center;
+      color: #3f51b5;
     }
     header h1 {
       margin: 0;
-      color: #6a1b9a;
+      font-size: 2.5rem;
     }
     header p {
-      font-size: 1rem;
-      color: #444;
+      margin-top: 10px;
+      font-size: 1.1rem;
+      color: #303f9f;
     }
+
     main {
       padding: 30px;
-      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
+
+    /* Recuadros de lecciones/tips */
     .lecciones {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
       margin-top: 30px;
     }
     .leccion {
-      background-color: #e8f5e9;
-      border-radius: 10px;
+      background-color: #fff;
+      border-radius: 15px;
       padding: 20px;
-      transition: transform 0.2s, background-color 0.2s;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .leccion:hover {
-      background-color: #c8e6c9;
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
     }
-    .pdf-button {
+    .leccion h3 {
+      margin-top: 0;
+      color: #3949ab;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .leccion p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #555;
+    }
+
+    /* Apartado destacado para PDFs o recursos */
+    .recurso {
+      background-color: #ffecb3;
+      border-left: 6px solid #ffb300;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .recurso a {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 15px;
       padding: 12px 25px;
-      background-color: #6a1b9a;
-      color: #fff;
+      background-color: #ff9800;
+      color: white;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
       transition: background-color 0.2s;
     }
-    .pdf-button:hover {
-      background-color: #8e24aa;
+    .recurso a:hover {
+      background-color: #fb8c00;
     }
+
     footer {
-      background-color: #f6d5d5;
-      padding: 10px;
+      background-color: #c5cae9;
+      color: #3f51b5;
       text-align: center;
-      margin-top: 40px;
+      padding: 15px;
+      margin-top: 50px;
       font-size: 0.9rem;
     }
+
   </style>
 </head>
 <body>
   <header>
     <h1>Caligrafía Secundaria</h1>
-    <p>Perfecciona tu letra y estilo con ejercicios más avanzados y creativos.</p>
+    <p>Perfecciona tu letra y estilo con ejercicios y consejos prácticos.</p>
   </header>
 
   <main>
-    <h2>Explora tus lecciones:</h2>
+    <h2>Tips para mejorar tu caligrafía y ortografía</h2>
     <div class="lecciones">
       <div class="leccion">
-        <h3>Caligrafía Moderna</h3>
-        <p>Aprende trazos elegantes y cursivas modernas para tus apuntes y proyectos.</p>
+        <h3>Practica diariamente</h3>
+        <p>Dedica al menos 10–15 minutos al día a ejercicios de letra, trazos y cursiva.</p>
       </div>
       <div class="leccion">
-        <h3>Decoración de Letras</h3>
-        <p>Descubre cómo adornar tus letras con sombras, curvas y estilos únicos.</p>
+        <h3>Usa guías y líneas</h3>
+        <p>Mantén tus letras alineadas y del mismo tamaño usando cuadernos de caligrafía o líneas guías.</p>
       </div>
       <div class="leccion">
-        <h3>Técnicas de Dibujo</h3>
-        <p>Combina caligrafía con ilustración y aprende a crear letras ilustradas.</p>
+        <h3>Combina estilos</h3>
+        <p>Experimenta con cursiva, letra de imprenta y estilos modernos para encontrar tu propio estilo.</p>
       </div>
       <div class="leccion">
-        <h3>Proyectos Creativos</h3>
-        <p>Realiza tarjetas, pósters y trabajos escolares aplicando tu caligrafía.</p>
+        <h3>Atención a la ortografía</h3>
+        <p>Antes de entregar trabajos, revisa palabras difíciles y corrige errores frecuentes.</p>
+      </div>
+      <div class="leccion">
+        <h3>Relajación y postura</h3>
+        <p>Mantén la mano relajada, sujeta el lápiz correctamente y evita tensión para escribir más fluido.</p>
+      </div>
+      <div class="leccion">
+        <h3>Revisa tus errores</h3>
+        <p>Haz una lista de palabras que te cuestan y practícalas varias veces hasta memorizarlas.</p>
+      </div>
+      <div class="leccion">
+        <h3>Proyectos creativos</h3>
+        <p>Aplica tu caligrafía en tarjetas, carteles o resúmenes para hacer el aprendizaje más divertido.</p>
       </div>
     </div>
 
-    <h2>Material de Apoyo</h2>
-    <p>Descarga tu guía de ejercicios en PDF para practicar en casa.</p>
-    <a class="pdf-button" href="https://github.com/tuusuario/caligrafia-kinder/raw/main/pdf/secundaria.pdf" target="_blank">
-      Descargar PDF
-    </a>
+    <div class="recurso">
+      <h2>Material de apoyo</h2>
+      <p>Descarga tu guía de ejercicios en PDF para practicar en casa.</p>
+      <a href="https://github.com/tuusuario/caligrafia-kinder/raw/main/pdf/secundaria.pdf" target="_blank">Descargar PDF</a>
+    </div>
   </main>
 
   <footer>
@@ -108,3 +152,4 @@
   </footer>
 </body>
 </html>
+
