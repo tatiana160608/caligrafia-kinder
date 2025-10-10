@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caligrafía Creativa</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #fffaf4;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #f6d5d5;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      color: #6a1b9a;
+    }
+    header p {
+      font-size: 1rem;
+      color: #444;
+    }
+    main {
+      padding: 30px;
+      text-align: center;
+    }
+    .niveles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .nivel {
+      background-color: #e8eaf6;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    .nivel:hover {
+      background-color: #d1c4e9;
+      transform: scale(1.05);
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    footer {
+      background-color: #f6d5d5;
+      padding: 10px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Caligrafía Creativa</h1>
+    <p>La caligrafía es el arte de escribir con belleza y precisión. Aprende según tu nivel educativo.</p>
+  </header>
+
+  <main>
+    <h2>Selecciona tu nivel:</h2>
+    <div class="niveles">
+      <a href="kinder.html"><div class="nivel"><h3>Kinder</h3><p>Aprende letras y trazos divertidos.</p></div></a>
+      <a href="secundaria.html"><div class="nivel"><h3>Secundaria</h3><p>Perfecciona tu letra y estilo.</p></div></a>
+      <a href="preparatoria.html"><div class="nivel"><h3>Preparatoria</h3><p>Desarrolla tu técnica avanzada.</p></div></a>
+      <a href="universidad.html"><div class="nivel"><h3>Universidad</h3><p>Aplica la caligrafía en el arte y diseño.</p></div></a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Caligrafía Creativa — Proyecto escolar
+  </footer>
+</body>
+</html>
