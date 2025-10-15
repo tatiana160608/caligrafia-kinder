@@ -53,16 +53,21 @@
       margin-top: 20px;
     }
     .leccion {
-      background-color: #f3e5f5;
+      background-color: #f8eafc;
       border-radius: 12px;
-      padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      padding: 20px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       text-align: center;
       flex: 1 1 220px;
       max-width: 260px;
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .leccion h3 { color: #6a1b9a; font-size: 1.3em; margin-bottom: 5px; }
-    .leccion p { font-size: 0.95em; color: #4a148c; line-height: 1.4; }
+    .leccion:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .leccion h3 { color: #6a1b9a; font-size: 1.3em; margin-bottom: 8px; }
+    .leccion p { font-size: 1em; color: #4a148c; line-height: 1.5; }
 
     /* Recuadro de Material de Apoyo */
     .recurso-modificado {
@@ -79,6 +84,7 @@
     }
     .recurso-modificado h2 { margin: 0 0 8px 0; color: #6a1b9a; }
     .recurso-modificado p { color: #4a148c; margin: 0 0 12px 0; }
+
     .recurso-acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
     .btn-descarga {
       display: inline-block;
@@ -106,7 +112,7 @@
     @media (max-width: 600px) {
       .recuadro, .recurso-modificado { width: 95%; padding: 15px; }
       .lecciones-secundaria { flex-direction: column; align-items: center; }
-      .leccion { width: 100%; max-width: 95%; }
+      .leccion { width: 95%; max-width: 95%; }
       .foto { width: 95%; }
       .recurso-acciones { flex-direction: column; gap: 10px; }
       .btn-descarga, .btn-volver { width: 90%; text-align: center; }
@@ -163,17 +169,11 @@
     <a class="btn-volver" href="index.html">
       ← Regresar al inicio
     </a>
-    <a class="btn-volver" href="material-apoyo-secundaria.html" target="_blank">
-      🎥 Material de apoyo
-    </a>
   </div>
 </div>
 
 </body>
 </html>
-
-
-
 
 
 
