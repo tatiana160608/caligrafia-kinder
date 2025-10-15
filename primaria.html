@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Caligrafía para Primaria</title>
+  <title>Caligrafía Primaria - Material de Apoyo</title>
   <style>
     body {
       font-family: "Comic Sans MS", "Segoe UI", sans-serif;
@@ -11,6 +11,7 @@
       padding: 20px;
       color: #333;
       margin: 0;
+      overflow-x: hidden;
     }
 
     h1 {
@@ -25,6 +26,21 @@
       font-size: 1.8em;
     }
 
+    /* Figuras decorativas primarias */
+    .figura { position: absolute; opacity: 0.6; animation: float 5s ease-in-out infinite alternate; z-index: 0; }
+    .figura.corazon { width: 40px; height: 40px; background: #e91e63; clip-path: polygon(50% 0%, 61% 15%, 75% 5%, 100% 25%, 80% 60%, 50% 100%, 20% 60%, 0% 25%, 25% 5%, 39% 15%); animation-duration: 5s; }
+    .figura.estrella { width: 35px; height: 35px; background-color: #ffd54f; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation-duration: 5s; }
+    .figura.lapiz { width: 18px; height: 55px; background: linear-gradient(#ffeb3b, #fbc02d); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); animation-duration: 4s; }
+
+    .corazon1 { top: 60px; left: 15%; }
+    .corazon2 { top: 180px; left: 75%; }
+    .estrella1 { top: 100px; left: 40%; }
+    .estrella2 { top: 250px; left: 20%; }
+    .lapiz1 { bottom: 60px; left: 65%; }
+    .lapiz2 { top: 120px; left: 80%; }
+
+    @keyframes float { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(15deg); } 100% { transform: translateY(0) rotate(-10deg); } }
+
     /* Imagen principal */
     .foto {
       display: flex;
@@ -35,7 +51,6 @@
       max-width: 400px;
       height: auto;
     }
-
     .foto img {
       width: 100%;
       height: auto;
@@ -56,33 +71,10 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
+    .recuadro h3 { margin-top: 0; color: #33691e; font-size: 1.8em; }
+    p { max-width: 700px; margin: 20px auto; line-height: 1.6; font-size: 1.1em; }
 
-    .recuadro h3 {
-      margin-top: 0;
-      color: #33691e;
-      font-size: 1.8em;
-    }
-
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      line-height: 1.6;
-      font-size: 1.1em;
-    }
-
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      color: #33691e;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Sección de tips */
+    /* Tips y lecciones */
     .lecciones-primaria {
       display: flex;
       flex-wrap: wrap;
@@ -92,7 +84,6 @@
       width: 90%;
       max-width: 900px;
     }
-
     .leccion {
       background-color: #f1f8e9;
       border-radius: 12px;
@@ -102,19 +93,8 @@
       max-width: 260px;
       text-align: center;
     }
-
-    .leccion h3 {
-      margin-top: 0;
-      color: #558b2f;
-      font-size: 1.3em;
-    }
-
-    .leccion p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.4;
-      color: #33691e;
-    }
+    .leccion h3 { margin-top: 0; color: #558b2f; font-size: 1.3em; }
+    .leccion p { margin: 0; font-size: 1rem; line-height: 1.4; color: #33691e; }
 
     /* Datos curiosos */
     .recuadro-primaria {
@@ -130,25 +110,11 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .recuadro-primaria h2 { margin-top: 0; color: #827717; font-size: 1.6em; text-align: center; }
+    .recuadro-primaria ul { padding-left: 20px; }
+    .recuadro-primaria li { margin-bottom: 10px; font-size: 1rem; line-height: 1.5; }
 
-    .recuadro-primaria h2 {
-      margin-top: 0;
-      color: #827717;
-      font-size: 1.6em;
-      text-align: center;
-    }
-
-    .recuadro-primaria ul {
-      padding-left: 20px;
-    }
-
-    .recuadro-primaria li {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    /* 📘 Recuadro de descarga */
+    /* Botones */
     .recurso-modificado {
       background-color: #fffde7;
       border-left: 6px solid #cddc39;
@@ -161,25 +127,9 @@
       margin-left: auto;
       margin-right: auto;
     }
-
-    .recurso-modificado h2 {
-      margin: 0 0 8px 0;
-      color: #827717;
-    }
-
-    .recurso-modificado p {
-      color: #6d4c41;
-      margin: 0 0 12px 0;
-    }
-
-    .recurso-acciones {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 8px;
-    }
-
+    .recurso-modificado h2 { margin: 0 0 8px 0; color: #827717; }
+    .recurso-modificado p { color: #6d4c41; margin: 0 0 12px 0; }
+    .recurso-acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
     .btn-descarga {
       display: inline-block;
       padding: 12px 22px;
@@ -190,9 +140,7 @@
       font-weight: 700;
       box-shadow: 0 6px 12px rgba(139,195,74,0.18);
     }
-
     .btn-descarga:hover { background-color: #7cb342; }
-
     .btn-volver {
       display: inline-block;
       padding: 12px 18px;
@@ -203,121 +151,96 @@
       font-weight: 700;
       box-shadow: 0 6px 12px rgba(85,139,47,0.12);
     }
-
     .btn-volver:hover { background-color: #33691e; }
 
-    /* 📱 Ajuste para móviles */
     @media (max-width: 600px) {
-      body {
-        padding: 10px;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      .recuadro, .recuadro-primaria, .recurso-modificado {
-        width: 95%;
-        padding: 15px;
-      }
-
-      .lecciones-primaria {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .leccion {
-        width: 100%;
-        max-width: 95%;
-      }
-
-      .foto {
-        width: 95%;
-      }
-
-      .recurso-acciones {
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .btn-descarga, .btn-volver {
-        width: 90%;
-        text-align: center;
-      }
+      body { padding: 10px; }
+      h1 { font-size: 2em; }
+      .recuadro, .recuadro-primaria, .recurso-modificado { width: 95%; padding: 15px; }
+      .lecciones-primaria { flex-direction: column; align-items: center; }
+      .leccion { width: 100%; max-width: 95%; }
+      .foto { width: 95%; }
+      .recurso-acciones { flex-direction: column; gap: 10px; }
+      .btn-descarga, .btn-volver { width: 90%; text-align: center; }
     }
   </style>
 </head>
-
 <body>
 
-  <h1>✍️ Caligrafía Creativa para Primaria</h1>
+<h1>✍️ Caligrafía Creativa para Primaria</h1>
 
-  <div class="foto">
-    <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/WhatsApp%20Image%202025-10-09%20at%209.51.11%20PM.jpeg"
-         alt="Niños aprendiendo caligrafía primaria">
+<!-- Figuras decorativas primarias -->
+<div class="figura corazon corazon1"></div>
+<div class="figura corazon corazon2"></div>
+<div class="figura estrella estrella1"></div>
+<div class="figura estrella estrella2"></div>
+<div class="figura lapiz lapiz1"></div>
+<div class="figura lapiz lapiz2"></div>
+
+<div class="foto">
+  <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/WhatsApp%20Image%202025-10-09%20at%209.51.11%20PM.jpeg" 
+       alt="Niños aprendiendo caligrafía primaria">
+</div>
+
+<div class="recuadro">
+  <h3>📝 Aprende y mejora tu escritura</h3>
+  <p>
+    En primaria, los niños empiezan a escribir de manera más fluida. La caligrafía ayuda a mejorar la legibilidad,
+    la velocidad y la coordinación entre la mano y el cerebro. Practicar con constancia fomenta la concentración
+    y la confianza al escribir.
+  </p>
+</div>
+
+<h2>✨ Tips y consejos para mejorar la caligrafía</h2>
+<div class="lecciones-primaria">
+  <div class="leccion">
+    <h3>Practicar diariamente</h3>
+    <p>Dedica unos minutos todos los días a repasar letras y palabras para reforzar la memoria muscular.</p>
   </div>
-
-  <div class="recuadro">
-    <h3>📝 Aprende y mejora tu escritura</h3>
-    <p>
-      En primaria, los niños empiezan a escribir de manera más fluida. La caligrafía ayuda a mejorar la legibilidad,
-      la velocidad y la coordinación entre la mano y el cerebro. Practicar con constancia fomenta la concentración
-      y la confianza al escribir.
-    </p>
+  <div class="leccion">
+    <h3>Usar plantillas y guías</h3>
+    <p>Los cuadernos con líneas y letras guía ayudan a mantener el tamaño correcto y la uniformidad en los trazos.</p>
   </div>
-
-  <h2>✨ Tips y consejos para mejorar la caligrafía</h2>
-  <div class="lecciones-primaria">
-    <div class="leccion">
-      <h3>Practicar diariamente</h3>
-      <p>Dedica unos minutos todos los días a repasar letras y palabras para reforzar la memoria muscular.</p>
-    </div>
-
-    <div class="leccion">
-      <h3>Usar plantillas y guías</h3>
-      <p>Los cuadernos con líneas y letras guía ayudan a mantener el tamaño correcto y la uniformidad en los trazos.</p>
-    </div>
-
-    <div class="leccion">
-      <h3>Mejorar la postura</h3>
-      <p>Sentarse correctamente con los pies apoyados y la mano relajada evita cansancio y mejora la escritura.</p>
-    </div>
-
-    <div class="leccion">
-      <h3>Colores y creatividad</h3>
-      <p>Usar colores y dibujos hace que la práctica sea divertida y mantiene la motivación.</p>
-    </div>
+  <div class="leccion">
+    <h3>Mejorar la postura</h3>
+    <p>Sentarse correctamente con los pies apoyados y la mano relajada evita cansancio y mejora la escritura.</p>
   </div>
-
-  <div class="recuadro-primaria">
-    <h2>📚 Datos curiosos</h2>
-    <ul>
-      <li>Los niños que practican caligrafía a diario mejoran hasta un 30% su legibilidad en pocas semanas.</li>
-      <li>Escribir a mano activa áreas del cerebro que no se estimulan al teclear.</li>
-      <li>Usar lápices de diferentes grosores ayuda a controlar la presión y el trazo.</li>
-      <li>La caligrafía puede mejorar la ortografía y la memoria visual de los niños.</li>
-    </ul>
+  <div class="leccion">
+    <h3>Colores y creatividad</h3>
+    <p>Usar colores y dibujos hace que la práctica sea divertida y mantiene la motivación.</p>
   </div>
+</div>
 
-  <!-- ✅ Nuevo recuadro moderno -->
-  <div class="recurso-modificado" role="region" aria-label="Material de apoyo y navegación">
-    <h2>📘 Material de apoyo</h2>
-    <p>Descarga la guía de ejercicios para practicar en casa.</p>
+<div class="recuadro-primaria">
+  <h2>📚 Datos curiosos</h2>
+  <ul>
+    <li>Los niños que practican caligrafía a diario mejoran hasta un 30% su legibilidad en pocas semanas.</li>
+    <li>Escribir a mano activa áreas del cerebro que no se estimulan al teclear.</li>
+    <li>Usar lápices de diferentes grosores ayuda a controlar la presión y el trazo.</li>
+    <li>La caligrafía puede mejorar la ortografía y la memoria visual de los niños.</li>
+  </ul>
+</div>
 
-    <div class="recurso-acciones">
-      <a class="btn-descarga" href="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/cuadernillo-para-mejorar-la-letra.pdf" download="actividades-primaria.pdf">
-        📄 Descargar PDF
-      </a>
-
-      <a class="btn-volver" href="index.html" title="Regresar al inicio">
-        ← Regresar al inicio
-      </a>
-    </div>
-
-    <p style="margin-top:12px; font-size:0.9rem; color:#5d4037;">
-      Si el navegador abre el PDF en vez de descargarlo, usa clic derecho → “Guardar enlace como...” (en móviles, mantén presionado el botón).
-    </p>
+<!-- Botones Material de Apoyo -->
+<div class="recurso-modificado">
+  <h2>📘 Material de apoyo</h2>
+  <p>Descarga la guía de ejercicios para practicar en casa.</p>
+  <div class="recurso-acciones">
+    <a class="btn-descarga" href="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/cuadernillo-para-mejorar-la-letra.pdf" download="actividades-primaria.pdf">
+      📄 Descargar PDF
+    </a>
+    <a class="btn-volver" href="index.html" title="Regresar al inicio">
+      ← Regresar al inicio
+    </a>
+    <a class="btn-volver" href="material-apoyo-primaria.html" title="Material de apoyo Kinder">
+      🎨 Material de primaria
+    </a>
   </div>
+  <p style="margin-top:12px; font-size:0.9rem; color:#5d4037;">
+    Si el navegador abre el PDF en vez de descargarlo, usa clic derecho → “Guardar enlace como...” (en móviles, mantén presionado el botón).
+  </p>
+</div>
 
 </body>
 </html>
+
