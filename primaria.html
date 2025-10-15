@@ -1,209 +1,84 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caligrafía Secundaria</title>
-  <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #fefcfb;
-      color: #333;
-      margin: 0;
-      padding: 0;
-    }
+<!-- BLOQUE: descarga + volver al inicio (reemplaza recurso + botones-final) -->
+<div class="recurso-modificado" role="region" aria-label="Material de apoyo y navegación">
+  <h2>📘 Material de apoyo</h2>
+  <p>Descarga la guía de ejercicios para practicar en casa.</p>
 
-    header {
-      background-color: #c5cae9;
-      padding: 30px;
-      text-align: center;
-      color: #3f51b5;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #303f9f;
-    }
+  <div class="recurso-acciones">
+    <a class="btn-descarga" href="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/caligrafi_769%20(1).pdf" download="Caligrafia-Secundaria.pdf">
+      📄 Descargar PDF
+    </a>
 
-    main {
-      padding: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    <a class="btn-volver" href="index.html" title="Regresar al inicio">
+      ← Regresar al inicio
+    </a>
+  </div>
 
-    /* Recuadros de lecciones/tips */
-    .lecciones {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    .leccion {
-      background-color: #fff;
-      border-radius: 15px;
-      padding: 20px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .leccion:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-    .leccion h3 {
-      margin-top: 0;
-      color: #3949ab;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-    .leccion p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #555;
-    }
+  <p style="margin-top:12px; font-size:0.9rem; color:#5d4037;">
+    Si el navegador abre el PDF en vez de descargarlo, usa clic derecho → "Guardar enlace como..." (en móviles, mantén presionado el botón de descargar).
+  </p>
+</div>
+/* Estilos para el recuadro de descarga/volver (secundaria) */
+.recurso-modificado {
+  background-color: #fff8e1;
+  border-left: 6px solid #ffb300;
+  padding: 22px;
+  border-radius: 12px;
+  margin-top: 40px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    /* Apartado destacado para PDFs o recursos */
-    .recurso {
-      background-color: #ffecb3;
-      border-left: 6px solid #ffb300;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      margin-top: 40px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
+.recurso-modificado h2 {
+  margin: 0 0 8px 0;
+  color: #ef6c00;
+}
 
-    .recurso h2 {
-      color: #ff8f00;
-      margin-top: 0;
-    }
+.recurso-modificado p {
+  color: #6d4c41;
+  margin: 0 0 12px 0;
+}
 
-    .recurso p {
-      color: #6d4c41;
-      font-size: 1rem;
-    }
+/* acciones: botón descarga y volver */
+.recurso-acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
 
-    .recurso a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #ff9800;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
+.btn-descarga {
+  display: inline-block;
+  padding: 12px 22px;
+  background-color: #ff9800;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 6px 12px rgba(255,152,0,0.18);
+}
 
-    .recurso a:hover {
-      background-color: #fb8c00;
-    }
+.btn-descarga:hover { background-color: #fb8c00; }
 
-    /* Botones inferiores */
-    .botones-final {
-      text-align: center;
-      margin-top: 40px;
-    }
+.btn-volver {
+  display: inline-block;
+  padding: 12px 18px;
+  background-color: #3f51b5;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  box-shadow: 0 6px 12px rgba(63,81,181,0.12);
+}
 
-    .botones-final a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      background-color: #3f51b5;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.2s;
-    }
+.btn-volver:hover { background-color: #303f9f; }
 
-    .botones-final a:hover {
-      background-color: #303f9f;
-    }
+/* responsive */
+@media (max-width: 600px) {
+  .recurso-acciones { flex-direction: column; gap: 10px; }
+  .btn-descarga, .btn-volver { width: 90%; text-align: center; }
+}
 
-    footer {
-      background-color: #c5cae9;
-      color: #3f51b5;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 0.9rem;
-    }
-
-    /* 📱 Ajuste para móviles */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      main {
-        padding: 15px;
-      }
-      .leccion {
-        padding: 15px;
-      }
-      .recurso a, .botones-final a {
-        width: 90%;
-        font-size: 1rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Caligrafía Secundaria</h1>
-    <p>Perfecciona tu letra y estilo con ejercicios y consejos prácticos.</p>
-  </header>
-
-  <main>
-    <h2>Tips para mejorar tu caligrafía y ortografía</h2>
-    <div class="lecciones">
-      <div class="leccion">
-        <h3>Practica diariamente</h3>
-        <p>Dedica al menos 10–15 minutos al día a ejercicios de letra, trazos y cursiva.</p>
-      </div>
-      <div class="leccion">
-        <h3>Usa guías y líneas</h3>
-        <p>Mantén tus letras alineadas y del mismo tamaño usando cuadernos de caligrafía o líneas guías.</p>
-      </div>
-      <div class="leccion">
-        <h3>Combina estilos</h3>
-        <p>Experimenta con cursiva, letra de imprenta y estilos modernos para encontrar tu propio estilo.</p>
-      </div>
-      <div class="leccion">
-        <h3>Atención a la ortografía</h3>
-        <p>Antes de entregar trabajos, revisa palabras difíciles y corrige errores frecuentes.</p>
-      </div>
-      <div class="leccion">
-        <h3>Relajación y postura</h3>
-        <p>Mantén la mano relajada, sujeta el lápiz correctamente y evita tensión para escribir más fluido.</p>
-      </div>
-      <div class="leccion">
-        <h3>Revisa tus errores</h3>
-        <p>Haz una lista de palabras que te cuestan y practícalas varias veces hasta memorizarlas.</p>
-      </div>
-      <div class="leccion">
-        <h3>Proyectos creativos</h3>
-        <p>Aplica tu caligrafía en tarjetas, carteles o resúmenes para hacer el aprendizaje más divertido.</p>
-      </div>
-    </div>
-
-    <div class="recurso">
-      <h2>📘 Material de apoyo</h2>
-      <p>Descarga tu guía de ejercicios en PDF para practicar en casa.</p>
-      <a href="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/caligrafi_769%20(1).pdf" download="Caligrafia-Secundaria.pdf">📄 Descargar PDF</a>
-    </div>
-
-    <div class="botones-final">
-      <a href="index.html">← Regresar al inicio</a>
-    </div>
-  </main>
-
-  <footer>
-    © 2025 Caligrafía Creativa — Proyecto escolar
-  </footer>
-</body>
-</html>
