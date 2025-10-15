@@ -18,23 +18,16 @@
     h2 { color: #880e4f; font-size: 1.6em; margin-bottom: 10px; }
     h3 { margin: 0; }
 
-    /* Video grid */
-    .video-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 30px;
-    }
+    /* Video card */
     .video-card {
       background-color: #f8bbd0;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.15);
       padding: 15px;
-      max-width: 320px;
-      width: 100%;
+      max-width: 400px;
+      width: 90%;
+      margin: 30px auto;
       transition: transform 0.3s;
-      position: relative;
     }
     .video-card:hover { transform: translateY(-5px); }
     .video-card h2 {
@@ -45,13 +38,14 @@
     }
     .video-card h2::after {
       content: '';
-      width: 40px;
+      width: 60px;
       height: 4px;
       background-color: #880e4f;
       display: block;
       margin: 4px auto 0 auto;
       border-radius: 2px;
     }
+
     .video-container {
       position: relative;
       padding-bottom: 56.25%;
@@ -103,7 +97,7 @@
     @media (max-width: 480px) {
       h1 { font-size: 1.6em; }
       h2, h3 { font-size: 1.4em; }
-      .video-card { max-width: 90%; }
+      .video-card { max-width: 95%; }
       .figura { display: none; }
     }
   </style>
@@ -120,27 +114,14 @@
 <div class="figura lapiz lapiz1"></div>
 <div class="figura lapiz2"></div>
 
-<!-- Videos -->
-<div class="video-grid">
-  <div class="video-card">
-    <h2>Video 1</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/pFVjLSWvgH4" title="Video 1 Secundaria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <div class="video-card">
-    <h2>Video 2</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/3PhWkt4TvYk" title="Video 2 Secundaria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-
-  <div class="video-card">
-    <h2>Video Nuevo</h2>
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/53iRHlcQCso?si=vVrAcGA3mr-Owbvm" title="Nuevo Video Secundaria" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+<!-- Video único -->
+<div class="video-card">
+  <h2>Video de Apoyo</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/53iRHlcQCso?si=vVrAcGA3mr-Owbvm" 
+            title="Video de apoyo Secundaria" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen></iframe>
   </div>
 </div>
 
@@ -150,4 +131,5 @@
 
 </body>
 </html>
+
 
