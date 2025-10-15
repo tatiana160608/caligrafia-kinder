@@ -115,17 +115,35 @@
       font-size: 1rem;
       line-height: 1.5;
     }
+
+    /* 🎥 Estilo del video responsive */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* Relación 16:9 */
+      height: 0;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      margin: 30px auto;
+      max-width: 600px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body>
   <h1>¡Bienvenido al mundo de la Caligrafía para Kinder!</h1>
-<div class="foto">
-  <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/kinder.jpeg"
-       alt="Niños aprendiendo caligrafía en Kinder"
-       style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
-</div>
 
-
+  <div class="foto">
+    <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/kinder.jpeg"
+         alt="Niños aprendiendo caligrafía en Kinder"
+         style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+  </div>
 
   <div class="recuadro">
     <h3>✏️ Aprende conmigo</h3>
@@ -142,12 +160,17 @@
     ¡Es el primer paso para que cada letra se convierta en una pequeña obra de arte!
   </p>
 
-
-
+  <!-- 🎬 VIDEO -->
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Video educativo de caligrafía Kinder"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+  </div>
 
   <!-- NUEVAS SECCIONES -->
-
-  <!-- Tips para mejorar la caligrafía -->
   <div class="lecciones-kinder">
     <h2>Tips para mejorar la caligrafía en Kinder</h2>
     <div class="leccion">
@@ -168,7 +191,6 @@
     </div>
   </div>
 
-  <!-- Qué hacer si no hay mejoras -->
   <div class="recuadro-kinder">
     <h2>Qué hacer si no hay mejoras</h2>
     <ul>
@@ -179,12 +201,16 @@
       <li>Consultar con un especialista en pedagogía o terapia ocupacional si los problemas persisten.</li>
     </ul>
   </div>
+
   <a href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/Sin%20ti%CC%81tulo%207.pdf">
     📄 Descargar PDF
   </a>
+  <br>
   <a href="index.html">← Regresar al inicio</a>
+
 </body>
 </html>
+
 
 
 
