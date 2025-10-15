@@ -8,18 +8,22 @@
       font-family: "Comic Sans MS", "Segoe UI", sans-serif;
       background-color: #fff8e1;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
       color: #333;
+      margin: 0;
     }
     h1 {
       color: #ff6f00;
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2.2em;
+      margin-bottom: 15px;
     }
     h2 {
       color: #4e342e;
       margin-top: 40px;
       font-size: 1.8em;
+    }
+    h3 {
+      margin: 0;
     }
     .foto {
       width: 100%;
@@ -32,50 +36,46 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #888;
-      font-size: 1rem;
+      overflow: hidden;
     }
-    .recuadro {
-      background-color: #ffe082;
+    .foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+    .recuadro, .recuadro-kinder {
       border-radius: 15px;
       padding: 20px;
       margin: 30px auto;
-      max-width: 500px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .recuadro {
+      background-color: #ffe082;
     }
     .recuadro h3 {
-      margin: 0;
       color: #e65100;
       font-size: 1.8em;
     }
     p {
       max-width: 600px;
-      margin: 20px auto;
+      margin: 15px auto;
       line-height: 1.6;
-      font-size: 1.1em;
+      font-size: 1.05em;
+      color: #4e342e;
     }
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      color: #6a1b9a;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* NUEVOS ESTILOS PARA TIPS Y RECUADRO DE MEJORAS */
     .lecciones-kinder {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-top: 30px;
+      padding: 0 10px;
     }
     .leccion {
       background-color: #e8f5e9;
       border-radius: 12px;
-      padding: 20px;
+      padding: 15px;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       text-align: left;
     }
@@ -85,7 +85,7 @@
       font-size: 1.3em;
     }
     .leccion p {
-      margin: 0;
+      margin: 5px 0 0 0;
       font-size: 1rem;
       line-height: 1.4;
       color: #4e342e;
@@ -93,14 +93,7 @@
     .recuadro-kinder {
       background-color: #fff3e0;
       border-left: 6px solid #fb8c00;
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 30px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
       text-align: left;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
     }
     .recuadro-kinder h2 {
       margin-top: 0;
@@ -116,15 +109,15 @@
       line-height: 1.5;
     }
 
-    /* 🎥 Estilo del video responsive */
+    /* 🎥 Video responsive */
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* Relación 16:9 */
+      padding-bottom: 56.25%; /* 16:9 */
       height: 0;
       overflow: hidden;
       border-radius: 15px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      margin: 30px auto;
+      margin: 20px auto 40px auto;
       max-width: 600px;
     }
     .video-container iframe {
@@ -133,6 +126,51 @@
       left: 0;
       width: 100%;
       height: 100%;
+      border-radius: 15px;
+    }
+
+    /* Botones estilo primaria/secundaria */
+    .boton {
+      display: inline-block;
+      padding: 12px 25px;
+      margin: 10px 5px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .boton-descargar {
+      background-color: #ffb74d;
+      color: #fff;
+    }
+    .boton-descargar:hover {
+      background-color: #ffa000;
+    }
+    .boton-inicio {
+      background-color: #81d4fa;
+      color: #fff;
+    }
+    .boton-inicio:hover {
+      background-color: #29b6f6;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 15px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+      h2, .recuadro h3 {
+        font-size: 1.5em;
+      }
+      .foto {
+        height: 200px;
+      }
+      .video-container {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
@@ -141,8 +179,7 @@
 
   <div class="foto">
     <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/kinder.jpeg"
-         alt="Niños aprendiendo caligrafía en Kinder"
-         style="width:100%; height:100%; object-fit:cover; border-radius:15px;">
+         alt="Niños aprendiendo caligrafía en Kinder">
   </div>
 
   <div class="recuadro">
@@ -152,27 +189,15 @@
   <p>
     En esta etapa, los niños comienzan a descubrir las letras y los trazos que dan forma a la escritura.
     La caligrafía en Kinder ayuda a mejorar la coordinación, la motricidad fina y el reconocimiento visual 
-    de las letras.  
+    de las letras.
     <br><br>
     A través de actividades divertidas con colores, dibujos y líneas, los pequeños aprenden a disfrutar 
-    el arte de escribir mientras desarrollan paciencia, atención y creatividad.  
+    el arte de escribir mientras desarrollan paciencia, atención y creatividad.
     <br><br>
     ¡Es el primer paso para que cada letra se convierta en una pequeña obra de arte!
   </p>
 
-  <!-- 🎬 VIDEO -->
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/VIDEO_ID"
-            title="Video educativo de caligrafía Kinder"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- NUEVAS SECCIONES -->
   <div class="lecciones-kinder">
-    <h2>Tips para mejorar la caligrafía en Kinder</h2>
     <div class="leccion">
       <h3>Practicar con juegos y dibujos</h3>
       <p>Usa actividades lúdicas como dibujar formas, letras grandes y colorear dentro de líneas para mejorar la motricidad fina.</p>
@@ -202,14 +227,23 @@
     </ul>
   </div>
 
-  <a href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/Sin%20ti%CC%81tulo%207.pdf">
-    📄 Descargar PDF
-  </a>
-  <br>
-  <a href="index.html">← Regresar al inicio</a>
+  <!-- 🎬 VIDEO AL FINAL -->
+  <h2>Guía práctica</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/53iRHlcQCso"
+            title="Video educativo de caligrafía Kinder"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+  </div>
+
+  <a href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/Sin%20ti%CC%81tulo%207.pdf" class="boton boton-descargar">📄 Descargar PDF</a>
+  <a href="index.html" class="boton boton-inicio">← Regresar al inicio</a>
 
 </body>
 </html>
+
 
 
 
