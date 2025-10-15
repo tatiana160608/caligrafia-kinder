@@ -6,152 +6,169 @@
   <title>Caligrafía Secundaria</title>
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
-      background-color: #fefcfb;
-      color: #333;
+      font-family: "Comic Sans MS", "Segoe UI", sans-serif;
+      background-color: #f3e5f5;
+      color: #4a148c;
       margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background-color: #c5cae9;
-      padding: 30px;
+      padding: 20px;
       text-align: center;
-      color: #3f51b5;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 10px;
-      font-size: 1.1rem;
-      color: #303f9f;
     }
 
-    main {
-      padding: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+    h1 { font-size: 2.2em; color: #6a1b9a; margin-bottom: 10px; }
+    h2 { font-size: 1.6em; color: #4a148c; margin-top: 30px; }
+    h3 { margin: 0; }
 
-    /* Recuadros de lecciones/tips */
-    .lecciones {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
+    /* Imagen principal */
+    .foto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      height: auto;
     }
-    .leccion {
-      background-color: #fff;
+    .foto img { width: 100%; height: auto; border-radius: 15px; border: 3px dashed #ce93d8; background-color: #f8f0fa; object-fit: cover; }
+
+    /* Recuadro principal */
+    .recuadro {
+      background-color: #f8f0fa;
       border-radius: 15px;
       padding: 20px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .leccion:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-    .leccion h3 {
-      margin-top: 0;
-      color: #3949ab;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-    .leccion p {
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.5;
-      color: #555;
-    }
-
-    /* Apartado destacado para PDFs o recursos */
-    .recurso {
-      background-color: #ffecb3;
-      border-left: 6px solid #ffb300;
-      padding: 20px;
-      border-radius: 12px;
+      margin: 30px auto;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
-      margin-top: 40px;
     }
-    .recurso a {
+    .recuadro h3 { color: #6a1b9a; font-size: 1.6em; margin-bottom: 10px; }
+    .recuadro p { max-width: 700px; margin: 10px auto; line-height: 1.6; font-size: 1em; }
+
+    /* Lecciones/tips */
+    .lecciones-secundaria {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .leccion {
+      background-color: #f3e5f5;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      flex: 1 1 220px;
+      max-width: 260px;
+    }
+    .leccion h3 { color: #6a1b9a; font-size: 1.3em; margin-bottom: 5px; }
+    .leccion p { font-size: 0.95em; color: #4a148c; line-height: 1.4; }
+
+    /* Recuadro de Material de Apoyo */
+    .recurso-modificado {
+      background-color: #f3e5f5;
+      border-left: 6px solid #ba68c8;
+      padding: 22px;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .recurso-modificado h2 { margin: 0 0 8px 0; color: #6a1b9a; }
+    .recurso-modificado p { color: #4a148c; margin: 0 0 12px 0; }
+    .recurso-acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn-descarga {
       display: inline-block;
-      margin-top: 15px;
-      padding: 12px 25px;
-      background-color: #ff9800;
+      padding: 12px 22px;
+      background-color: #8e24aa;
       color: white;
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.2s;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(142,36,170,0.18);
     }
-    .recurso a:hover {
-      background-color: #fb8c00;
+    .btn-descarga:hover { background-color: #6a1b9a; }
+    .btn-volver {
+      display: inline-block;
+      padding: 12px 18px;
+      background-color: #4a148c;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(74,20,140,0.12);
     }
+    .btn-volver:hover { background-color: #38006b; }
 
-    footer {
-      background-color: #c5cae9;
-      color: #3f51b5;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-      font-size: 0.9rem;
+    @media (max-width: 600px) {
+      .recuadro, .recurso-modificado { width: 95%; padding: 15px; }
+      .lecciones-secundaria { flex-direction: column; align-items: center; }
+      .leccion { width: 100%; max-width: 95%; }
+      .foto { width: 95%; }
+      .recurso-acciones { flex-direction: column; gap: 10px; }
+      .btn-descarga, .btn-volver { width: 90%; text-align: center; }
     }
-
   </style>
 </head>
 <body>
-  <header>
-    <h1>Caligrafía Secundaria</h1>
-    <p>Perfecciona tu letra y estilo con ejercicios y consejos prácticos.</p>
-  </header>
 
-  <main>
-    <h2>Tips para mejorar tu caligrafía y ortografía</h2>
-    <div class="lecciones">
-      <div class="leccion">
-        <h3>Practica diariamente</h3>
-        <p>Dedica al menos 10–15 minutos al día a ejercicios de letra, trazos y cursiva.</p>
-      </div>
-      <div class="leccion">
-        <h3>Usa guías y líneas</h3>
-        <p>Mantén tus letras alineadas y del mismo tamaño usando cuadernos de caligrafía o líneas guías.</p>
-      </div>
-      <div class="leccion">
-        <h3>Combina estilos</h3>
-        <p>Experimenta con cursiva, letra de imprenta y estilos modernos para encontrar tu propio estilo.</p>
-      </div>
-      <div class="leccion">
-        <h3>Atención a la ortografía</h3>
-        <p>Antes de entregar trabajos, revisa palabras difíciles y corrige errores frecuentes.</p>
-      </div>
-      <div class="leccion">
-        <h3>Relajación y postura</h3>
-        <p>Mantén la mano relajada, sujeta el lápiz correctamente y evita tensión para escribir más fluido.</p>
-      </div>
-      <div class="leccion">
-        <h3>Revisa tus errores</h3>
-        <p>Haz una lista de palabras que te cuestan y practícalas varias veces hasta memorizarlas.</p>
-      </div>
-      <div class="leccion">
-        <h3>Proyectos creativos</h3>
-        <p>Aplica tu caligrafía en tarjetas, carteles o resúmenes para hacer el aprendizaje más divertido.</p>
-      </div>
-    </div>
+<h1>✍️ Caligrafía Secundaria</h1>
 
-    <div class="recurso">
-      <h2>Material de apoyo</h2>
-      <p>Descarga tu guía de ejercicios en PDF para practicar en casa.</p>
-      <a href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/caligrafi_769%20(1).pdf" target="_blank">Descargar PDF</a>
-      <br>
-      <a href="index.html">Regresar al inicio</a>
-    </div>
-  </main>
+<div class="foto">
+  <img src="https://raw.githubusercontent.com/tatiana160608/caligrafia-kinder/main/secundaria.jpeg" alt="Secundaria aprendiendo caligrafía">
+</div>
 
-  <footer>
-    © 2025 Caligrafía Creativa — Proyecto escolar
-  </footer>
+<div class="recuadro">
+  <h3>📖 Mejora tu escritura y estilo</h3>
+  <p>
+    En secundaria, los estudiantes perfeccionan su letra y desarrollan su propio estilo.
+    La caligrafía ayuda a la legibilidad, velocidad y presentación de trabajos escolares.
+  </p>
+</div>
+
+<h2>✨ Tips para mejorar tu caligrafía</h2>
+<div class="lecciones-secundaria">
+  <div class="leccion">
+    <h3>Practica diariamente</h3>
+    <p>Dedica 10–15 minutos diarios a repasar letras, trazos y cursiva.</p>
+  </div>
+  <div class="leccion">
+    <h3>Usa guías y líneas</h3>
+    <p>Cuadernos con líneas o plantillas ayudan a mantener el tamaño uniforme de las letras.</p>
+  </div>
+  <div class="leccion">
+    <h3>Combina estilos</h3>
+    <p>Experimenta con cursiva, letra de imprenta y estilos modernos.</p>
+  </div>
+  <div class="leccion">
+    <h3>Revisión de errores</h3>
+    <p>Identifica palabras difíciles y practica hasta memorizarlas.</p>
+  </div>
+  <div class="leccion">
+    <h3>Relajación y postura</h3>
+    <p>Mantén la mano relajada y la postura correcta para escribir fluido.</p>
+  </div>
+</div>
+
+<div class="recurso-modificado">
+  <h2>📘 Material de apoyo</h2>
+  <p>Descarga tu guía de ejercicios para practicar en casa.</p>
+  <div class="recurso-acciones">
+    <a class="btn-descarga" href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/caligrafi_769%20(1).pdf" target="_blank">
+      📄 Descargar PDF
+    </a>
+    <a class="btn-volver" href="index.html">
+      ← Regresar al inicio
+    </a>
+    <a class="btn-volver" href="material-apoyo.html" target="_blank">
+      🎥 Material de apoyo
+    </a>
+  </div>
+</div>
+
 </body>
 </html>
 
