@@ -2,84 +2,145 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Caligrafía Kinder</title>
+  <title>Caligrafía Kinder - Material de Apoyo</title>
   <style>
     body {
       font-family: "Comic Sans MS", "Segoe UI", sans-serif;
       background: linear-gradient(135deg, #fff8e1, #ffe0b2);
       text-align: center;
-      margin: 0;
       padding: 20px;
+      margin: 0;
       color: #4e342e;
       overflow-x: hidden;
     }
 
-    h1 { color: #ff6f00; font-size: 2em; margin-bottom: 20px; }
-    h2 { color: #4e342e; margin-top: 40px; font-size: 1.8em; }
+    h1 { font-size: 2.2em; color: #ff6f00; margin-bottom: 10px; }
+    h2 { font-size: 1.6em; color: #e65100; margin-top: 30px; }
     h3 { margin: 0; }
 
-    .foto {
-      width: 100%; max-width: 400px; height: 250px;
-      margin: 20px auto; border-radius: 15px;
-      border: 3px dashed #ffb74d; background-color: #fff3e0;
-      display: flex; align-items: center; justify-content: center; overflow: hidden;
-    }
-    .foto img { width:100%; height:100%; object-fit:cover; border-radius:15px; }
+    /* Figuras decorativas */
+    .figura { position: absolute; opacity: 0.6; animation: float 5s ease-in-out infinite alternate; z-index: 0; }
+    .figura.globo { width: 60px; height: 80px; background: radial-gradient(circle at 30% 30%, #ff8a65, #ff7043); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; animation-duration: 6s; }
+    .figura.estrella { width: 35px; height: 35px; background-color: #ffd54f; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation-duration: 5s; }
+    .figura.lapiz { width: 20px; height: 60px; background: linear-gradient(#ffeb3b, #fbc02d); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); animation-duration: 4s; }
+    .globo1 { top: 50px; left: 10%; }
+    .globo2 { top: 150px; left: 70%; }
+    .estrella1 { top: 80px; left: 40%; }
+    .estrella2 { top: 220px; left: 20%; }
+    .lapiz1 { bottom: 50px; left: 60%; }
+    .lapiz2 { top: 100px; left: 80%; }
 
-    .recuadro, .recuadro-kinder {
+    @keyframes float { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(15deg); } 100% { transform: translateY(0) rotate(-10deg); } }
+
+    /* Imagen principal */
+    .foto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      height: auto;
+    }
+    .foto img { width: 100%; height: auto; border-radius: 15px; border: 3px dashed #ffb74d; background-color: #fff3e0; object-fit: cover; }
+
+    /* Recuadro principal */
+    .recuadro {
+      background-color: #fff8e1;
       border-radius: 15px;
       padding: 20px;
       margin: 30px auto;
+      width: 90%;
       max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-    .recuadro { background-color: #ffe082; }
-    .recuadro h3 { color: #e65100; font-size: 1.8em; }
-    p { max-width: 600px; margin: 15px auto; line-height: 1.6; font-size: 1.05em; color: #4e342e; }
-
-    .tips-section h2 {
-      color: #e65100;
-      font-size: 1.6em;
-      margin-top: 40px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       text-align: center;
     }
+    .recuadro h3 { color: #ff6f00; font-size: 1.6em; margin-bottom: 10px; }
+    .recuadro p { max-width: 700px; margin: 10px auto; line-height: 1.6; font-size: 1em; }
 
-    .lecciones-kinder { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; padding: 0 10px; }
-    .leccion { background-color: #e8f5e9; border-radius: 12px; padding: 15px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); text-align: left; }
-    .leccion h3 { margin-top: 0; color: #2e7d32; font-size: 1.3em; }
-    .leccion p { margin: 5px 0 0 0; font-size: 1rem; line-height: 1.4; color: #4e342e; }
-
-    .recuadro-kinder { background-color: #fff3e0; border-left: 6px solid #fb8c00; text-align: left; }
-    .recuadro-kinder h2 { margin-top: 0; color: #e65100; font-size: 1.6em; }
-    .recuadro-kinder ul { padding-left: 20px; }
-    .recuadro-kinder li { margin-bottom: 10px; font-size: 1rem; line-height: 1.5; }
-
-    /* Botones actualizados igual que Primaria */
-    .boton {
-      display: inline-block; padding: 12px 25px; margin: 15px 5px; border-radius: 12px; font-weight: bold; font-size: 1em;
-      text-decoration: none; transition: 0.3s;
+    /* Recuadro de tips y datos curiosos */
+    .recuadro-primaria {
+      background-color: #fff3e0;
+      border-left: 6px solid #fb8c00;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      width: 90%;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .boton-pdf { background-color: #8bc34a; color: #fff; }
-    .boton-pdf:hover { background-color: #7cb342; }
-    .boton-material { background-color: #8bc34a; color: #fff; }
-    .boton-material:hover { background-color: #7cb342; }
-    .boton-inicio { background-color: #558b2f; color: #fff; }
-    .boton-inicio:hover { background-color: #33691e; }
+    .recuadro-primaria h2 { margin-top: 0; color: #e65100; font-size: 1.5em; text-align: center; }
+    .recuadro-primaria ul { padding-left: 20px; }
+    .recuadro-primaria li { margin-bottom: 10px; font-size: 1rem; line-height: 1.5; }
 
-    /* Figuras decorativas */
-    .figura { position: absolute; border-radius: 50%; opacity: 0.6; animation: float 5s ease-in-out infinite alternate; z-index: 0; }
-    .figura.globo { width: 60px; height: 80px; background: radial-gradient(circle at 30% 30%, #ff8a65, #ff7043); border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; animation-duration: 6s; }
-    .figura.estrella { width: 40px; height: 40px; background-color: #ffd54f; clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); animation-duration: 5s; }
-    .figura.lapiz { width: 20px; height: 60px; background: linear-gradient(#ffeb3b, #fbc02d); clip-path: polygon(50% 0%, 100% 100%, 0% 100%); animation-duration: 4s; }
-    .globo1 { top: 50px; left: 10%; } .globo2 { top: 150px; left: 70%; } .estrella1 { top: 80px; left: 40%; } .estrella2 { top: 220px; left: 20%; } .lapiz1 { bottom: 50px; left: 60%; } .lapiz2 { top: 100px; left: 80%; }
-    @keyframes float { 0% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-20px) rotate(15deg); } 100% { transform: translateY(0) rotate(-10deg); } }
+    .lecciones-kinder {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .leccion {
+      background-color: #fff8e1;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      text-align: center;
+      flex: 1 1 220px;
+      max-width: 260px;
+    }
+    .leccion h3 { color: #ff6f00; font-size: 1.3em; margin-bottom: 5px; }
+    .leccion p { font-size: 0.95em; color: #4e342e; line-height: 1.4; }
 
-    @media (max-width: 480px) { 
-      h1 { font-size: 1.6em; } 
-      h2,h3 { font-size: 1.4em; } 
-      .figura { display: none; } 
-      .lecciones-kinder { gap: 15px; padding: 0 5px; }
-      .tips-section h2 { font-size: 1.4em; margin-top: 20px; padding: 0 10px; }
+    /* Botones recuadro igual a primaria */
+    .recurso-modificado {
+      background-color: #fffde7;
+      border-left: 6px solid #ffb74d;
+      padding: 22px;
+      border-radius: 12px;
+      margin-top: 40px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      text-align: center;
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .recurso-modificado h2 { margin: 0 0 8px 0; color: #e65100; }
+    .recurso-modificado p { color: #4e342e; margin: 0 0 12px 0; }
+    .recurso-acciones { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn-descarga {
+      display: inline-block;
+      padding: 12px 22px;
+      background-color: #8bc34a;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(139,195,74,0.18);
+    }
+    .btn-descarga:hover { background-color: #7cb342; }
+    .btn-volver {
+      display: inline-block;
+      padding: 12px 18px;
+      background-color: #558b2f;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 700;
+      box-shadow: 0 6px 12px rgba(85,139,47,0.12);
+    }
+    .btn-volver:hover { background-color: #33691e; }
+
+    @media (max-width: 600px) {
+      .recuadro, .recuadro-primaria, .recurso-modificado { width: 95%; padding: 15px; }
+      .lecciones-kinder { flex-direction: column; align-items: center; }
+      .leccion { width: 100%; max-width: 95%; }
+      .foto { width: 95%; }
+      .recurso-acciones { flex-direction: column; gap: 10px; }
+      .btn-descarga, .btn-volver { width: 90%; text-align: center; }
     }
   </style>
 </head>
@@ -101,42 +162,34 @@
 
 <div class="recuadro">
   <h3>✏️ Aprende conmigo</h3>
+  <p>
+    En esta etapa, los niños comienzan a descubrir las letras y los trazos que dan forma a la escritura.
+    La caligrafía en Kinder ayuda a mejorar la coordinación, la motricidad fina y el reconocimiento visual de las letras.
+  </p>
 </div>
 
-<p>
-  En esta etapa, los niños comienzan a descubrir las letras y los trazos que dan forma a la escritura.
-  La caligrafía en Kinder ayuda a mejorar la coordinación, la motricidad fina y el reconocimiento visual de las letras.  
-  <br><br>
-  A través de actividades divertidas con colores, dibujos y líneas, los pequeños aprenden a disfrutar
-  el arte de escribir mientras desarrollan paciencia, atención y creatividad.  
-  <br><br>
-  ¡Es el primer paso para que cada letra se convierta en una pequeña obra de arte!
-</p>
-
-<div class="tips-section">
-  <h2>Tips para mejorar la caligrafía en Kinder</h2>
-  <div class="lecciones-kinder">
-    <div class="leccion">
-      <h3>Practicar con juegos y dibujos</h3>
-      <p>Usa actividades lúdicas como dibujar formas, letras grandes y colorear dentro de líneas para mejorar la motricidad fina.</p>
-    </div>
-    <div class="leccion">
-      <h3>Ejercicios cortos y diarios</h3>
-      <p>Dedica 5–10 minutos al día a repasar trazos y letras, evitando que se aburran o se frustren.</p>
-    </div>
-    <div class="leccion">
-      <h3>Usar guías y plantillas</h3>
-      <p>Ayuda a que el niño aprenda a mantener el tamaño y la forma correcta de las letras usando cuadernos o plantillas con líneas y dibujos.</p>
-    </div>
-    <div class="leccion">
-      <h3>Refuerzos positivos</h3>
-      <p>Elogia cada esfuerzo y progreso, aunque sea pequeño, para motivar al niño a seguir practicando.</p>
-    </div>
+<h2>✨ Tips y consejos para mejorar la caligrafía</h2>
+<div class="lecciones-kinder">
+  <div class="leccion">
+    <h3>Practicar con juegos y dibujos</h3>
+    <p>Usa actividades lúdicas como dibujar formas, letras grandes y colorear dentro de líneas para mejorar la motricidad fina.</p>
+  </div>
+  <div class="leccion">
+    <h3>Ejercicios cortos y diarios</h3>
+    <p>Dedica 5–10 minutos al día a repasar trazos y letras, evitando que se aburran o se frustren.</p>
+  </div>
+  <div class="leccion">
+    <h3>Usar guías y plantillas</h3>
+    <p>Ayuda a que el niño aprenda a mantener el tamaño y la forma correcta de las letras usando cuadernos o plantillas con líneas y dibujos.</p>
+  </div>
+  <div class="leccion">
+    <h3>Refuerzos positivos</h3>
+    <p>Elogia cada esfuerzo y progreso, aunque sea pequeño, para motivar al niño a seguir practicando.</p>
   </div>
 </div>
 
-<div class="recuadro-kinder">
-  <h2>Qué hacer si no hay mejoras</h2>
+<div class="recuadro-primaria">
+  <h2>📚 Qué hacer si no hay mejoras</h2>
   <ul>
     <li>Revisar la postura, cómo sostiene el lápiz y la tensión en la mano.</li>
     <li>Verificar si existen dificultades visuales o de motricidad fina que necesiten apoyo profesional.</li>
@@ -146,13 +199,26 @@
   </ul>
 </div>
 
-<!-- Botones actualizados -->
-<a href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/Sin%20ti%CC%81tulo%207.pdf" target="_blank" class="boton boton-pdf">📄 Descargar PDF</a>
-<a href="index.html" class="boton boton-inicio">← Regresar al inicio</a>
-<a href="material-apoyo.html" target="_blank" class="boton boton-material">🎥 Material de apoyo</a>
+<div class="recurso-modificado">
+  <h2>📘 Material de apoyo</h2>
+  <p>Descarga la guía de ejercicios para practicar en casa.</p>
+  <div class="recurso-acciones">
+    <a class="btn-descarga" href="https://github.com/tatiana160608/caligrafia-kinder/blob/main/Sin%20ti%CC%81tulo%207.pdf" target="_blank">
+      📄 Descargar PDF
+    </a>
+    <a class="btn-volver" href="index.html">
+      ← Regresar al inicio
+    </a>
+    <a class="btn-volver" href="material-apoyo.html" target="_blank">
+      🎥 Material de apoyo
+    </a>
+  </div>
+</div>
 
 </body>
 </html>
+
+
 
 
 
